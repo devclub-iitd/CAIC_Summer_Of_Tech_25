@@ -1,136 +1,135 @@
-# Week 1: Introduction to Webots and Multirotor Simulation
-Deadline: 25 May EOD
-
-### 1. **Objectives**
--Understand the components and basic flight dynamics of a quadrotor.
-Install and configure Webots and Python controller support.
-Execute a simple Webots controller to perform take-off, hover, and land.
+# 🚁 Week 1: Introduction to Webots and Multirotor Simulation
 
 ---
 
-### 2. **Setup & Prerequisites**
-System Requirements
+## 1. Objectives
 
+- Understand the components and basic flight dynamics of a quadrotor  
+- Install and configure Webots and Python controller support  
+- Execute a simple Webots controller to perform take-off, hover, and land
 
-Operating System: Windows 10/11, macOS 10.15+, or Ubuntu 18.04+
+---
 
+## 2. Setup & Prerequisites
 
-RAM: Minimum 8 GB (16 GB recommended)
+### ✅ System Requirements
 
+- **OS:** Windows 10/11, macOS 10.15+, or Ubuntu 18.04+  
+- **RAM:** 8 GB minimum (16 GB recommended)  
+- **Disk:** ≥ 5 GB free  
+- **CPU/GPU:** Any modern multi-core CPU (GPU optional)
 
-Disk Space: ≥ 5 GB free
+---
 
+### 🧭 Install Webots
 
-CPU/GPU: Any modern multi-core CPU; GPU optional for hardware acceleration
+- Download **Webots 2023a** from:  
+  👉 https://cyberbotics.com/#download  
+- Follow the installer instructions for your OS
 
+---
 
-*Install Webots*
--Download the 2023a version of Webot from https://cyberbotics.com/#download
--Follow the installer instructions for your platform.
+### 🐍 Install Python and Dependencies
 
-*Install Python and Dependencies*
--Install Python 3.7–3.9 (from https://python.org).
+- Install Python 3.7–3.9 from: https://python.org
 
-*Create and activate a virtual environment:*
+#### Create and activate a virtual environment
 
- 	python -m venv webots-env
-source webots-env/bin/activate   # Linux/macOS
-webots-env\Scripts\activate      # Windows
+```bash
+python -m venv webots-env
 
+# On Linux/macOS
+source webots-env/bin/activate
+
+# On Windows
+webots-env\Scripts\activate
+```
 Install required packages:
- pip install controller==0.1.0
- (The controller package provides the Python API for Webots.)
+ - pip install controller==0.1.0
+ - (The controller package provides the Python API for Webots.)
 
 
 *Obtain Starter World and Controller*
-  -Clone or download the AeroClub starter repository (if provided).
-  -Alternatively, use Webots’ built-in mavic_2_pro example:
-  -In Webots, navigate to File → Open Sample World.
-  -Select projects/samples/robots/mavic_2_pro.wbt
+  - Clone or download the AeroClub starter repository (if provided).
+  - Alternatively, use Webots’ built-in mavic_2_pro example:
+  - In Webots, navigate to File → Open Sample World.
+  - Select projects/samples/robots/mavic_2_pro.wbt
 
 
 *Directory Structure*
+
+
  Your project folder should contain:
 
  week1/
-├── quadcopter.wbt  
+
+ 
+├── mavic2pro.wbt  
 ├── controllers/  
 │   └── takeoff_hover_land.py  
 └── README.md  
 
 ---
 
-### 3. **Concepts Covered**
-Lift and Thrust: How rotor speed generates upward force.
+## 3. 🚀 Concepts Covered
 
+### ✈️ Lift and Thrust
+Rotor speed generates **upward force**. Increasing the RPM (rotations per minute) of the propellers increases lift, allowing the drone to rise.
 
+### 🔁 Orientation Control
 
+- **Roll**: Tilting about the **front-to-rear** axis (longitudinal).
+- **Pitch**: Tilting about the **left-to-right** axis (lateral).
+- **Yaw**: Rotating about the **vertical** axis (directional heading).
 
-Roll: tilting about the front-to-rear axis
+### 🧭 Coordinate Frames
 
+- **World Frame**: A **fixed** coordinate system representing the simulation environment.
+- **Body Frame**: A coordinate system **attached to the drone**, which moves with it.
 
-Pitch: tilting about the left-to-right axis
+### 🔄 API Control Loop
 
+The standard control loop followed in simulation:
 
-Yaw: rotation about the vertical axis
-
-
-Coordinate Frames:
-
-
-World frame (fixed) vs. body frame (attached to drone)
-
-
-API Control Loop:
 
 
 Sensor read → compute commands → send actuation → repeat
 
 ---
 
-### 4. **Tasks**
-Load the Starter World
+## 4. 📋 Tasks
 
+### ✅ Load the Starter World
 
-Open quadcopter.wbt in Webots.
+1. Open Webots.
+2. Navigate to `worlds/` folder.
+3. Load the file `quadcopter.wbt`.
+4. Ensure the environment loads correctly and the quadrotor model is visible.
 
+### 🧠 Implement the Python Controller
 
-Verify that the environment loads and that the quadrotor model is visible.
+Create a new controller script `controllers/takeoff_hover_land/takeoff_hover_land.py` with the following objectives:
 
+- **Takeoff**: Increase rotor speeds to lift off.
+- **Hover**: Maintain a stable altitude.
+- **Land**: Decrease rotor speeds gradually to descend.
 
-Implement the Python Controller
+### 🔧 Code Structure (Skeleton Logic to Complete)
 
-
-*Create controllers/takeoff_hover_land.py with the following logic, some of the code are not completed. Understand the logic and complete the code :*
-
-
+```
  from controller import Robot
 
-
 #Create Robot instance
-
-
 robot = Robot()
-
-
 timestep = int(robot.getBasicTimeStep())
 
-
 #Motor device names — adjust if needed
-
-
 motor_names = ["front left propeller", "front right propeller", "rear left propeller", "rear right propeller"]
 
-
 #Initialize motors
-
-
 motors = []
 
-
 for name in motor_names:
-
-
     motor = robot.getDevice(name)
     if motor is None:
         print(f"Error: Motor device '{name}' not found. Please check device names.")
@@ -140,18 +139,11 @@ for name in motor_names:
     motors.append(motor)
 
 def set_all_motors_velocity(velocity):
-
-
   for motor in motors:
-
-  
-        motor.setVelocity(velocity)
+       motor.setVelocity(velocity)
 
 #Set motor velocities with opposite directions for proper torque balance
-
-
 def set_all_motors_velocity(base_velocity):
-
 
     #Direction multipliers for motors: +1 or -1 depending on spin direction
     directions = [ - , - , -  , - ]  # Edit and adjust if your drone motor layout differs
@@ -159,17 +151,9 @@ def set_all_motors_velocity(base_velocity):
         motor.setVelocity(base_velocity * directions[i])
 
 #Set the Parameters
-
-
 takeoff_duration = 0.0   #seconds to reach hover velocity
-
-
 hover_duration = 0.0    #seconds to hover
-
-
 land_duration = 0.0     #seconds to land
-
-
 max_velocity =  0.0    #max motor velocity for hover (tune as needed)
 
 
@@ -180,74 +164,57 @@ max_velocity =  0.0    #max motor velocity for hover (tune as needed)
 
 #########################################################
 
+
 set_all_motors_velocity(0.0)
-
-
 print("Flight sequence complete.")
+```
 
+ ## 5. 🚀 How to Run
 
- -In Webots, assign this script as the controller for the mavic_2_pro node.
+### 1. Assign the Controller
 
+- Open your Webots project.
+- In the Scene Tree, select the `mavic_2_pro` node.
+- Set the controller field to: `takeoff_hover_land`.
 
-   -Run the Simulation
+### 2. Run the Simulation
 
-
-   -Click Run in Webots.
-
-
-   -Observe the drone take off, hover at approximately 1 m, then land smoothly.
-
----
-
-### 5. **Expected Output**
-
-
-Controller Script: takeoff_hover_land.py with clear comments.
-
-
-Simulation Recording:
-
-
- A screen capture or video (≤ 2 minutes) demonstrating take-off, hover, and landing.
-
-
-Brief Report:
-
-
- A short README section describing any installation challenges or tips.
+- Click the green **Run** button (▶️) in Webots.
+- The drone should:
+  - Take off to ~1 meter
+  - Hover for a few seconds
+  - Land smoothly
 
 ---
 
-### 6. **Bonus Challenge (Optional)**
+## 6. 🎯 Bonus Challenge (Optional)
 
+### Square Flight Pattern Before Landing
 
-Augment your controller to perform a square flight pattern at 1 m altitude before landing:
+Enhance the controller to:
 
+1. Take off to 1 meter
+2. Perform a square pattern:
+   - Forward 1 m
+   - Right 1 m
+   - Backward 1 m
+   - Left 1 m
+3. Return to starting point
+4. Land
 
-Fly forward 1 m, right 1 m, backward 1 m, left 1 m.
+Use GPS or internal odometry to track relative motion.
 
+---
+## 7. 📚 Resources
 
-Return to the origin point.
-
-
-Land as before.
+- [Webots Installation Guide](https://cyberbotics.com/doc/guide/installing-webots)
+- [Python API Reference](https://cyberbotics.com/doc/reference/python-api)
+- [Mavic 2 Pro Tutorial](https://cyberbotics.com/doc/guide/mavic-2-pro?version=R2023a)
 
 ---
 
-### 7. **Resources**
-
-
-Webots Installation Guide: https://cyberbotics.com/doc/guide/installing-webots
-
-
-Webots Python API Reference: https://cyberbotics.com/doc/reference/python-api 
-
-
-Mavic2Pro Tutorial: https://cyberbotics.com/doc/guide/mavic-2-pro?version=R2023a
-
-
-
-
-
+## 8. SUBMISSION
+- Submit your work through the google form attached below
+- https://forms.office.com/Pages/ResponsePage.aspx?id=S1xNYsVFIkGM0ETw-E6UXcue0fDziu5KmhlObRm5LTlUM01KRjNWVUxIOEpTUUpVQzgyQ1FXQjhTNy4u
 
 

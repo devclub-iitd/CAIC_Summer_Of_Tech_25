@@ -41,6 +41,10 @@ Optional: Setup Jupyter locally with `pandas`, `matplotlib`, `seaborn`, `textblo
 
 ## 📦 2. Load the Dataset
 
+📎 **Training Dataset:**  
+🔗 [Click here to open](https://docs.google.com/spreadsheets/d/1JcESl7qCCBvS6xpWMZplhCXunvmkcNU_/edit?usp=drive_link)
+
+
 ```python
 import pandas as pd
 

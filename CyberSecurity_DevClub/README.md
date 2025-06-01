@@ -4,13 +4,13 @@ Welcome to the cybersecurity vertical of the CSoT part by DevClub, IIT Delhi. Th
 
 While the course emphasizes offensive techniques (red teaming) to make learning fun and interactive, understanding these methods is essential for anyone looking to defend systems effectively. Whether you're interested in ethical hacking or system security and auditing (blue teaming), this foundation will help you recognize, exploit, and ultimately mitigate real-world vulnerabilities.
 
-**Start Date:** 25th May, 2025
+**Start Date:** 27th May, 2025
 **Format:** Weekly resource bundles + self-paced study + weekend CTF challenges  
 **Audience:** IIT Delhi students
 
 ---
 
-## Week 1 – Linux Fundamentals & Cybersecurity Onboarding
+## [Week 1 – Linux Fundamentals & Cybersecurity Onboarding](Week1/)
 
 **Topics:**
 - Introduction to cybersecurity and CTFs (types, platforms, mindset)
@@ -25,7 +25,7 @@ While the course emphasizes offensive techniques (red teaming) to make learning 
 - Write bash scripts for file search and info gathering  
 - Setup and explore cybersecurity platforms
 
-**CTF Challenge:** Day 6  
+**CTF Challenge:**  
 - Linux command usage and simple scripting challenges
 
 ---
@@ -47,7 +47,7 @@ While the course emphasizes offensive techniques (red teaming) to make learning 
 - Stego challenge: extract hidden data from images/audio  
 - Forensics challenge: extract metadata and recover hidden info from files and network captures
 
-**CTF Challenge:** Day 6  
+**CTF Challenge:**  
 - Mixed crypto, stego, and forensic challenges
 
 ---
@@ -67,7 +67,7 @@ While the course emphasizes offensive techniques (red teaming) to make learning 
 - Perform OSINT on a mock target and create a report  
 - Write scripts to automate recon tasks
 
-**CTF Challenge:** Day 6  
+**CTF Challenge:** 
 - Recon and network scanning challenges
 
 ---
@@ -88,7 +88,7 @@ While the course emphasizes offensive techniques (red teaming) to make learning 
 - Practice manual request tampering using Burp Suite  
 - Write scripts automating web attacks
 
-**CTF Challenge:** Day 6  
+**CTF Challenge:**  
 - Web exploitation challenges (SQLi, XSS, session hijacking)
 
 ---
@@ -108,7 +108,7 @@ While the course emphasizes offensive techniques (red teaming) to make learning 
 - Write Python scripts for post-exploitation tasks  
 - Prepare for final CTF challenge
 
-**Final CTF Challenge:** Days 5–6  
+**Final CTF Challenge:** 
 - 8–10 multi-topic challenges covering all course topics  
 - Team-based timed event with leaderboard and writeup session
 
