@@ -41,12 +41,19 @@ And not just learning — actually building. Every week includes:
 
 ## 📚 Weekly Modules
 
-Each week builds on the last — from core concepts to real-world apps:
+Each week builds on the last — from core concepts to real-world applications:
 
-- 🔰 [Week 1: Introduction to DeFi](./week1)  
-- 💱 [Week 2: DeFi Protocols](./week2)  
-- ⚠️ [Week 3: Limitations of DeFi & Solutions](./week3)  
-- 🧪 [Week 4 & 5: Research and Projects](./week4-5)
+- 🔰 **Introduction to Blockchain Technology** (June 2)
+- 🌐 **Overview of DeFi** (June 6)
+- 📝 **Smart Contracts** (June 9)
+- 🔮 **Oracles & Stablecoins** (June 13) - *by Nikhilesh*
+- ⚡ **MEV (Maximal Extractable Value)** (June 16) - *by Fardeen*
+- 💰 **Lending and Staking** (June 19) - *by Austin*
+- 🔄 **AMMs (Automated Market Makers)** (June 21/22) - *by Arun*
+- 🛡️ **Smart Contract Security** (June 28/29) - *by Prince*
+- 🌉 **Bridges & Interoperability**
+- 🔐 **Staking & Restaking (Eigen Layer)** - *by Anto*
+  
 ---
 
 ## 🏆 NFT Rewards
