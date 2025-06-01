@@ -42,6 +42,8 @@ As mentioned above, **THE LEARNING CURVE HAS BEEN INTENTIONALLY KEPT GENTLE TO E
 
 ## [CS Research by ARIES x ACES ACM](CS_Research_ARIES_X_ACES_ACM/)
 
+## [Defi Bootcamp by BlocSoc](./Defi_Bootcamp_BlocSoc/)
+
 ## [AerialRobotics by AeroClub](AerialRobotics_AeroClub/)
 
 ## [Cybersecurity by Devclub](CyberSecurity_Devclub/)
