@@ -220,7 +220,7 @@ command > output.txt 2>&1        # Redirect both output and errors
 There is a .tar.zx file present in this folder, download it in your linux system and unzip it.
 You can use the following command to do the same:
 ```bash
-wget -qO- https://github.com/Z3R0C1PH3R/CAIC_Summer_Of_Tech_25/raw/refs/heads/main/CyberSecurity_Devclub/Week1/scavenger_hunt.tar.xz | tar -Jxf - 
+wget -qO- https://github.com/devclub-iitd/CAIC_Summer_Of_Tech_25/raw/refs/heads/main/CyberSecurity_DevClub/Week1/scavenger_hunt.tar.xz | tar -Jxf -
 ```
 Then using only your terminal, try to find the real hidden flag.
 
