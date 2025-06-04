@@ -34,6 +34,7 @@ While the course emphasizes offensive techniques (red teaming) to make learning 
 
 **Topics:**  
 - Classical ciphers (Caesar, Vigenère) and encoding schemes (Base64, Hex) and their practical uses
+- Modern ciphers (AES, RSA) and how they are used in the modern world
 - Hash functions & cracking basics (MD5, SHA family) with tools like Hashcat  
 - CyberChef for encoding/decoding and crypto puzzles  
 - Introduction to steganography (image/audio file hiding, tools like Steghide, zsteg)  
