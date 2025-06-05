@@ -1,0 +1,1 @@
+decode the base64, You will get an array. Take hint from the challenge name "Event digger" and also notice it is js syntax "var" and conclude these are js events codes. Reverse them, replace the square brackets with curly ones to get the proper flag format 
