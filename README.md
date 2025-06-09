@@ -36,7 +36,7 @@ We recommend you explore every track—at least initially—to understand what e
 # Different Paths:
 As mentioned above, **THE LEARNING CURVE HAS BEEN INTENTIONALLY KEPT GENTLE TO ENCOURAGE EVERYONE TO TRY THE TRACKS!**
 
-## [AI+Dev by Devclub](AI+Dev_Devclub/)
+## [AI+Dev by Devclub](AI_&_Dev_DevClub/)
 
 ## [GenAI by ACES ACM x ARIES](GenAI_ACES_ACM_X_ARIES/)
 
@@ -44,11 +44,11 @@ As mentioned above, **THE LEARNING CURVE HAS BEEN INTENTIONALLY KEPT GENTLE TO E
 
 ## [AerialRobotics by AeroClub](AerialRobotics_AeroClub/)
 
-## [Cybersecurity by Devclub](CyberSecurity_Devclub/)
+## [Cybersecurity by Devclub](CyberSecurity_DevClub/)
 
-## [FullStack by Devclub](FullStack_Devclub/)
+## [FullStack by Devclub](FullStack_DevClub/)
 
-## [Gamedev by Devclub](Gamedev_Devclub/)
+## [Gamedev by Devclub](Gamedev_DevClub/)
 
 ## [Interactive Light Pollution Visualization by Physics and Astronomy Club](Interactive_Light_Pollution_Visualization_PAC/)
 
